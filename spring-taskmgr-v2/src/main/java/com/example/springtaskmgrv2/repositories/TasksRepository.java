@@ -20,4 +20,6 @@ public interface TasksRepository extends JpaRepository<TaskEntity, Integer> {
     List<TaskEntity> findAllByCompletedAndDueDateBefore(boolean completed, Date dueDate);
 
     List<TaskEntity> findAllByTitleContainingIgnoreCase(String titleFragment);
+
+
 }

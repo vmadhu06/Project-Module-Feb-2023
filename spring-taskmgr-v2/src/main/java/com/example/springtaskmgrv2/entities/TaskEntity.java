@@ -2,6 +2,7 @@ package com.example.springtaskmgrv2.entities;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -20,6 +21,7 @@ public class TaskEntity extends BaseEntity {
     @Column(name = "completed", nullable = false, columnDefinition = "boolean default false")
     Boolean completed;
 
+    @CreatedDate
     @Column(name = "due_date", nullable = true)
     Date dueDate;
 }
